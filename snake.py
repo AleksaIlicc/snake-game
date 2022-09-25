@@ -27,6 +27,13 @@ class Snake:
 
     def extend(self):
         self.add_segment(self.all_snake_parts[-1].position())
+    
+    def reset(self):
+        for part in self.all_snake_parts:
+            part.goto(800,800)#send to diff location
+        self.all_snake_parts.clear()
+        self.create_snake()
+        self.head=self.all_snake_parts[0]
 
 
 
